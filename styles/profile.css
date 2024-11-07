@@ -1,0 +1,317 @@
+/* Profile Hero Section */
+.profile-hero {
+    position: relative;
+    height: 360px;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: left;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 29, 56, 0.65);
+    padding: 80px 20px;
+}
+
+.hero-content {
+    position: relative;
+    color: #fff;
+    /* padding: 40px; */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 40px 10px 40px;
+
+}
+
+/* Flex container for badges and buttons */
+.hero-flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+/* Breadcrumbs */
+.breadcrumb {
+    font-size: 14px;
+    color: #e7e7df;
+    margin-bottom: 10px;
+}
+
+.breadcrumb a {
+    color: #e7e7df;
+    text-decoration: none;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+/* Heading and Badges */
+.hero-content h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 15px;
+    margin-top: 1.2rem;
+}
+
+/* Badges */
+.badge-container {
+    display: inline-flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.badge {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9em;
+    font-weight: bold;
+    color: white;
+    padding: 6px 15px;
+    border-radius: 15px;
+    max-width: fit-content; /* Ensures badge only takes up as much space as needed */
+}
+
+.badge.verified {
+    background-color: #1d9bf0; /* blue color for verified */
+}
+
+.badge.sponsored {
+    background-color: #2a9d8f; /* green color for sponsored */
+}
+
+/* Font Awesome Icons for badges */
+.badge.verified::before {
+    content: "\f00c"; /* Font Awesome check icon */
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 900;
+}
+
+.badge.sponsored::before {
+    content: "\f155"; /* Font Awesome dollar-sign icon */
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+}
+
+/* Contact Buttons Aligned to the Right */
+.contact-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+    align-items: center;
+    justify-content: flex-end; /* Right-align buttons */
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 15px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+.phone-button {
+    background-color: #ea8933;
+}
+
+.website-button {
+    background-color: #0462b3;
+}
+
+.button i {
+    font-size: 1.2em; /* Icon size */
+}
+
+/* Styling for the Map Link Button */
+.map-link {
+    background-color: #007bff; /* Blue color for the button */
+    font-size: 0.9em;          /* Slightly smaller font */
+    padding: 10px 18px;        /* Adjust padding */
+    color: white;              /* White text for contrast */
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    display: block;            /* Makes the button take the full width of the container */
+    width: fit-content;        /* Only as wide as the content */
+    margin: 20px auto 0;       /* Centers the button and adds space above */
+}
+
+
+/* Profile Details Section */
+.profile-details {
+    position: relative; /* Ensure relative positioning */
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 1100px;
+    margin: 20px auto;
+    display: block; /* Ensure it follows original structure on desktop */
+}
+
+.profile-details h2 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.profile-details p {
+    font-size: 1em;
+    color: #555;
+    margin: 5px 0;
+}
+
+.broker-image-container {
+    position: absolute;
+    top: 15px; /* Adjusted for spacing */
+    right: 15px;
+    padding: 5px;
+    max-width: 250px; /* Increase size as needed */
+    max-height: 250px;
+}
+
+.broker-image-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px; /* Optional for rounded corners */
+}
+
+.map-container {
+    width: 100%;
+    height: 450px; /* Adjust as needed */
+    margin-top: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+
+
+
+#additional-info h3 {
+    font-size: 1.2em;
+    margin-top: 20px;
+    color: #333;
+}
+
+/* Social Media and Contact Links */
+#instagram-link, #broker-email {
+    color: #007bff;
+    text-decoration: none;
+}
+
+#instagram-link:hover, #broker-email:hover {
+    text-decoration: underline;
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 768px) {
+    /* Profile Hero Section */
+    .profile-hero {
+        height: 380px; /* Reduce height */
+        justify-content: center; /* Center-align content */
+    }
+
+    .hero-overlay {
+        padding: 40px 15px; /* Reduce padding */
+    }
+
+    .hero-content h1 {
+        font-size: 2.15em; /* Reduce font size */
+        text-align: center;
+    }
+
+    /* Flex container for badges and buttons */
+    .hero-flex-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .badge-container, .contact-buttons {
+        width: 100%;
+        justify-content: center; /* Center buttons */
+        align-items: center;
+    }
+
+    /* Profile Details Section */
+    .profile-details {
+        padding: 15px; /* Reduce padding */
+        padding-top: 20px; /* Add top padding */
+        display: flex;
+        flex-direction: column; /* Stack items vertically */
+    }
+
+    /* Hide breadcrumbs on mobile */
+    .breadcrumb {
+        display: none;
+    }
+
+    .broker-image-container {
+        order: -1; /* Moves it to the top in flex order */
+        position: relative; /* Remove absolute positioning */
+        max-width: 250px; /* Reduce size for smaller screens */
+        margin: 0 auto 10px auto; /* Center the image with margin below */
+        display: block;
+        top: unset;
+        right: unset;
+    }
+
+    h2 {
+        text-align: center;
+    }
+
+    .contact-buttons {
+        justify-content: center; /* Center-align buttons on mobile */
+    }
+
+    .button {
+        padding: 12.75px 17px; /* Reduce padding by 15% */
+        font-size: 0.90em; /* Reduce font size by 15% */
+    }
+
+    /* Map Container */
+    .map-container {
+        height: 300px; /* Adjust height for mobile */
+    }
+
+    /* Agent Cards */
+    .agent-card {
+        margin: 10px auto; /* Center cards */
+        width: 90%; /* Full-width on small screens */
+    }
+}
+
+@media (max-width: 480px) {
+    /* Smaller adjustments for very small screens */
+    .profile-hero {
+        height: 200px;
+    }
+
+    .hero-content h1 {
+        font-size: 1.5em;
+    }
+
+    .button {
+        padding: 10px 15px;
+        font-size: 0.9em;
+    }
+    
+    /* Additional Info Section */
+    #additional-info h3 {
+        font-size: 1em;
+    }
+}
