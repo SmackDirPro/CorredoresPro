@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head></head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Encuentra corredores de propiedades confiables y verificados en todas las regiones de Chile. Conectamos compradores y vendedores con los mejores profesionales para bienes raíces residenciales, comerciales y rurales. ¿Estás insatisfecho con tu corredor actual? Descubre nuevas opciones de corredores certificados.">
+    <meta name="keywords" content="corredores de propiedades chile, corredores de propiedades en todo chile, corredores de confianza en chile, compra venta propiedades chile, corredores en Chile, bienes raíces en Chile, arriendo de casas chile, compra venta parcelas sur de chile, corredores certificados chile">  
+    <meta name="author" content="Corredores de Propiedades en Chile">
+    <title>Perfil de Corredor de Propiedades en Chile | Bienes Raíces en Chile</title>
+    <script src="/scripts/glbld.js"></script>
+    <!-- Include Font Awesome for social media icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- CSS Specifically for this page -->
+    <link rel="stylesheet" href="/styles/profile.css">
+    <!-- Favicon links -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favic/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favic/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favic/favicon-16x16.png">
+    <link rel="manifest" href="/assets/images/favic/site.webmanifest">
+    <link rel="icon" type="image/x-icon" href="images/favic/favicon.ico">
+    <link rel="icon" type="image/png" sizes="192x192" href="/assets/images/favic/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/assets/images/favic/android-chrome-512x512.png">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7H96RZLD5E"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-7H96RZLD5E');
+    </script>
+    </head>
+<body>
+    <div id="header-placeholder"></div>
+
+    <!-- Hero Section with Background -->
+    <section class="profile-hero" style="background-image: url('/assets/images/bgs/bg-profile.webp')">
+        <div class="hero-overlay">
+            <div class="hero-content">
+                <nav class="breadcrumb">
+                    <a href="/">Inicio</a> » <a href="/corredoras-chile/">Corredores</a> » <span id="broker-name"></span>
+                </nav>
+                <h1 id="broker-name-heading"></h1>
+
+                <div class="hero-flex-container">
+                    <div class="badge-container">
+                        <span id="verified-badge" class="badge verified"></i> Verificado</span>
+                        <span id="sponsored-badge" class="badge sponsored"></i> Destacado</span>
+                    </div>
+
+                    <div class="contact-buttons">
+                        <a id="phone-button" href="tel:+56912345678" class="button phone-button"><i class="fas fa-phone-alt"></i> +56 9 1234 5678</a>
+                        <a id="website-button" href="https://website.com" target="_blank" class="button website-button"><i class="fas fa-globe"></i> Visitar Sitio Web</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+
+    <!-- Profile Details Section -->
+    <section class="profile-details container">
+        <h2>Acerca de <span id="broker-name-info">Nombre del Broker</span></h2>
+        <p><strong>Dirección:</strong> <span id="broker-address"></span></p>
+        <p><strong>Región:</strong> <span id="broker-region"></span></p>
+        <p><strong>Teléfono:</strong> <span id="broker-phone"></span></p>
+        <p><strong>Email:</strong> <a id="broker-email" href="mailto:">Enviar Correo</a></p>
+        <p><strong>Sitio Web:</strong> <a id="broker-website" href="#" target="_blank">Visitar</a></p>
+        <p><strong>Especialidades:</strong> <span id="broker-specialties"></span></p>
+        <p><strong>Años de Experiencia:</strong> <span id="broker-experience"></span></p>
+
+        <!-- Additional info such as Google Rating and People’s Choice -->
+        <div id="additional-info">
+            <h3>Información Adicional</h3>
+            <p><strong>Google Reviews:</strong> <span id="google-reviews"></span></p>
+            <p><strong>Google Rating:</strong> <span id="google-rating"></span></p>
+            <p><strong>Instagram:</strong> <a id="instagram-link" href="#" target="_blank">Instagram</a></p>
+        </div>
+
+        <div id="map-container">
+            <iframe id="broker-gmaps" width="100%" height="450" style="border:2px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        
+    </section>
+
+    <section class="featured-agents">
+        <div class="container" style="max-width: 1100px;">
+            <h2>Corredores Destacados</h2>
+            <div class="agents-grid" id="sponsored-agents">
+                <!-- Sponsored agent cards will be dynamically inserted here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer-placeholder"></div>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+    const brokerData = JSON.parse(localStorage.getItem('selectedBroker'));
+
+    if (brokerData && brokerData.gmapembed) {
+        console.log('Google Maps embed link:', brokerData.gmapembed); // For debugging
+        document.getElementById('broker-gmaps').src = brokerData.gmapembed;
+    } else {
+        console.warn('Google Maps embed link not available for this broker.');
+        document.getElementById('broker-gmaps').style.display = 'none';
+    }
+    });  
+     </script>
+    
+
+    
+    <script src="/scripts/profile.js"></script>
+</body>
+</html>
