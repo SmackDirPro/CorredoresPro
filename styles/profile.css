@@ -295,8 +295,9 @@
     }
 }
 
+/*
 @media (max-width: 480px) {
-    /* Smaller adjustments for very small screens */
+    /* Smaller adjustments for very small screens
     .profile-hero {
         height: 380px;
     }
@@ -310,8 +311,11 @@
         font-size: 0.9em;
     }
     
-    /* Additional Info Section */
+    /* Additional Info Section
     #additional-info h3 {
         font-size: 1em;
     }
 }
+    */
+
+
