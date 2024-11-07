@@ -298,7 +298,7 @@
 @media (max-width: 480px) {
     /* Smaller adjustments for very small screens */
     .profile-hero {
-        height: 200px;
+        height: 380px;
     }
 
     .hero-content h1 {
