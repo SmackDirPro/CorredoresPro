@@ -1,0 +1,934 @@
+/* #### CSS VARIABLES (ROOT) #### */
+:root {
+    /* Brand Colors */
+    --color-primary: #003366;         /* Deep navy blue - main brand color */
+    --color-primary-dark: #002244;    /* Darker blue for hover states */
+    --color-primary-light: #004c99;   /* Lighter blue for accents */
+    --color-secondary: #f0f4f8;       /* Light blue-grey for sections */
+    
+    /* Text Colors */
+    --color-text: #2d3748;           /* Darker gray for main text */
+    --color-text-light: #464d59;     /* Medium gray for secondary text */
+    --color-text-white: #ffffff;     /* White text */
+    --color-heading: #1a202c;        /* Nearly black for headings */
+    
+    /* Background Colors */
+    --color-background: #ffffff;
+    --color-footer: #002244;         /* Using primary-dark for footer */
+    --color-footer-text: #b3c5d7;    /* Lighter blue-grey for footer text */
+    --color-background-light: #d7e6f5;    /* alternate background for page sections */
+    
+   /* New Footer Legal Background Color */
+   --color-footer-legal-background: #1a1a1a; /* Adjust this to your desired background color */
+    
+
+    /* Shadows */
+    --shadow-header: 0 2px 8px rgba(0, 51, 102, 0.15);  /* Adjusted shadow with brand color */
+    --shadow-card: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* #### RESET AND BASE STYLES #### */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    color: var(--color-text);
+    background-color: var(--color-background);
+}
+
+.btngrl {
+    text-align: center;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* #### HEADER STYLES #### */
+header {
+    background-color: var(--color-primary);
+    padding: 1rem;
+    box-shadow: var(--shadow-header);
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    top: 0;
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative; /* Ensure the toggle button aligns correctly */
+}
+
+/* .logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-text-white);
+}*/
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    width: 40px;
+    height: auto;
+    margin-inline-end: 10px;
+}
+
+.logo-text {
+    font-size: 1.35rem;
+    font-weight: bold;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+.logo a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* #### NAVIGATION STYLES #### */
+nav ul.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+nav ul.nav-list li a {
+    text-decoration: none;
+    color: var(--color-text-white);
+    font-weight: 500;
+    transition: opacity 0.2s ease;
+}
+
+nav ul.nav-list li a:hover {
+    opacity: 0.8;
+}
+
+.nav-toggle {
+    display: none;
+    font-size: 2rem;
+    color: var(--color-text-white);
+    cursor: pointer;
+    margin-left: auto; /* Push the toggle button to the far right */
+}
+
+@media (max-width: 768px) {
+    nav ul.nav-list {
+        flex-direction: column;
+        background-color: var(--color-primary-dark);
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        padding: 1rem;
+        display: none;
+        transition: all 0.3s ease;
+        border-radius: 0 0 10px 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    nav ul.nav-list.active {
+        display: block;
+    }
+
+    nav ul.nav-list li {
+        margin: 0.5rem 0;
+    }
+
+    nav ul.nav-list li a {
+        padding: 0.75rem;
+        color: var(--color-text-white);
+        border-radius: 5px;
+        transition: background-color 0.2s ease;
+    }
+
+    nav ul.nav-list li a:hover {
+        background-color: var(--color-primary-light);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* #### HERO SECTION STYLES #### */
+.hero {
+    padding: 5.75rem 1rem;
+    background-color: var(--color-background);
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    background-image: url('/assets/images/herobg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: overlay;
+    background-color: rgba(255, 255, 255, 0.85);
+}
+
+.hero-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--color-heading);
+    margin-bottom: 1rem;
+    margin-top: 1.85rem;
+}
+
+.subtitle {
+    font-size: 1.45rem;
+    color: var(--color-text-light);
+    margin-bottom: 1rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.highlights p {
+    margin-bottom: -10px;
+}
+
+/* Media queries for hero section */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .highlights p {
+        font-size: 1rem;
+    }
+}
+
+/* #### BANNER SECTION STYLES #### */
+.banner {
+    padding: 2rem 0;
+    background-color: var(--color-background);
+}
+
+.banner-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+.banner-text {
+    max-width: 600px;
+}
+
+.banner-text h2 {
+    font-size: 2rem;
+    color: var(--color-heading);
+    margin-bottom: 1rem;
+}
+
+.banner-text p {
+    font-size: 1.125rem;
+    color: var(--color-text-light);
+    margin-bottom: 2rem;
+}
+
+.banner-image {
+    display: flex;
+    justify-content: flex-end;
+    flex: 1;
+}
+
+.banner-image img {
+    max-width: 80%;
+    height: auto;
+    display: block;
+}
+
+/* Media queries for banner section */
+@media (max-width: 768px) {
+    .banner-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .banner-image {
+        justify-content: center;
+        margin-top: 1.5rem;
+    }
+
+    .banner-image img {
+        max-width: 60%;
+    }
+
+    .banner-text {
+        max-width: 100%;
+    }
+}
+
+/* #### CTA BUTTON STYLES #### */
+.cta-button {
+    background-color: var(--color-primary);
+    color: var(--color-text-white);
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.cta-button:hover {
+    background-color: var(--color-primary-dark);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 6px rgba(0, 51, 102, 0.1);
+}
+
+/* Media queries for CTA button */
+@media (max-width: 768px) {
+    .cta-button {
+        width: 100%;
+        margin-top: 1rem;
+    }
+}
+
+/* #### CONTAINER STYLES #### */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* #### KEY POINTS SECTION STYLES #### */
+/* Section Container */
+.key-points {
+    padding: 5rem 0;
+    background-color: var(--color-background);
+}
+
+/* Section Header */
+.key-points h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+    color: var(--color-heading);
+}
+
+/* Grid Layout */
+.key-points-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+/* Key Point Cards */
+.key-point {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--color-background);
+    border-radius: 8px;
+    box-shadow: var(--shadow-card);
+    transition: transform 0.3s ease;
+}
+
+.key-point:hover {
+    transform: translateY(-5px);
+}
+
+.key-point-icon {
+    font-size: 2rem;
+    color: var(--color-accent);
+    margin-bottom: 1rem;
+}
+
+.key-point h3 {
+    font-size: 1.25rem;
+    color: var(--color-heading);
+    margin-bottom: 1rem;
+}
+
+.key-point p {
+    color: var(--color-text-light);
+    font-size: 1rem;
+}
+
+/* Media queries for key points section */
+@media (max-width: 768px) {
+    .key-points h2 {
+        font-size: 2rem;
+    }
+
+    .key-points-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .key-point {
+        margin: 0 1rem;
+    }
+}
+
+/* #### REGIONS SECTION STYLES #### */
+.regions {
+    padding: 4rem 0;
+    background-image: url('../assets/images/keypoints.jpg');
+    background-size: cover;
+    background-attachment: fixed; /* This makes the image scroll with the page */
+    background-position: center;
+    position: relative; /* Required for overlay */
+    color: var(--color-text-white); /* Ensure text is white for contrast */
+}
+
+/* Darker Overlay for Better Text Readability */
+.regions::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Increased darkness to improve readability */
+    z-index: 1; /* Place the overlay below the content */
+}
+
+/* Ensure content is above the overlay */
+.regions .container {
+    position: relative;
+    z-index: 2;
+}
+
+/* Header Styling */
+.regions h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--color-text-white); /* White text for contrast */
+    margin-bottom: 3rem;
+    letter-spacing: 0.05rem;
+}
+
+/* Create a three-column grid for the region list */
+.region-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Three columns */
+    gap: 1.5rem 2rem; /* Row and column gaps */
+    list-style: none;
+    padding: 0;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Style each region item */
+.region-list li {
+    font-size: 1.125rem;
+    font-weight: 500;
+    text-align: center;
+}
+
+/* Style for region links */
+.region-list li a {
+    text-decoration: none;
+    color: var(--color-text-white); /* White text for better visibility */
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.35); /* Light transparent background for links */
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+    display: block;
+}
+
+/* Hover effect */
+.region-list li a:hover {
+    background-color: rgba(255, 255, 255, 0.7); /* Slightly more visible on hover */
+    color: var(--color-primary-dark); /* Dark text color on hover */
+    transform: translateY(-3px); /* Lift the link slightly on hover */
+}
+
+/* Media queries for regions section */
+@media (max-width: 768px) {
+    .region-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .region-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* #### FEATURED AGENTS SECTION STYLES #### */
+/* Section Container */
+.featured-agents {
+    padding: 5rem 0;
+    background-color: var(--color-background);
+}
+
+/* Section Header */
+.featured-agents h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+    color: var(--color-heading);
+}
+
+.section-subtitle {
+    text-align: center;
+    color: var(--color-text-light);
+    margin-bottom: 3rem;
+    font-size: 1.125rem;
+}
+
+/* Agents Grid */
+.agents-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+/* Agent Cards */
+.agent-card {
+    background-color: var(--color-background);
+    border-radius: 8px;
+    box-shadow: var(--shadow-card);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.agent-card:hover {
+    transform: translateY(-5px);
+}
+
+.agent-image {
+    width: 100%;
+    height: 200px; /* Set the height of the image container */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 8px; /* Optional: To round corners for a modern look */
+    overflow: hidden;
+}
+.agent-card h3 {
+    padding: 1.5rem 1.5rem 0.5rem;
+    font-size: 1.25rem;
+    color: var(--color-heading);
+}
+
+.agent-card p {
+    padding: 0 1.5rem 1.5rem;
+    color: var(--color-text-light);
+}
+
+/* Agent CTA Button */
+.agent-cta {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    margin: 0 1.5rem 1.5rem;
+    background-color: var(--color-primary);
+    color: var(--color-text-white);
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+}
+
+.agent-cta:hover {
+    background-color: var(--color-primary-dark);
+}
+
+/* Media queries for featured agents section */
+@media (max-width: 768px) {
+    .featured-agents h2 {
+        font-size: 2rem;
+    }
+
+    .agents-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .agent-card {
+        margin: 0 1rem;
+    }
+}
+
+/* #### SOCIAL PROOF SECTION STYLES #### */
+.social-proof {
+    padding: 4rem 0;
+    background-color: var(--color-background-light);
+}
+
+.social-proof h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--color-heading);
+    margin-bottom: 3rem;
+}
+
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.review-card {
+    background-color: var(--color-secondary);
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: var(--shadow-card);
+    transition: transform 0.3s ease;
+}
+
+.review-card:hover {
+    transform: translateY(-5px);
+}
+
+.review-text {
+    font-size: 1rem;
+    color: var(--color-text-light);
+    margin-bottom: 1.5rem;
+}
+
+.review-author {
+    display: flex;
+    align-items: center;
+}
+
+.review-author img {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin-right: 1rem;
+}
+
+.author-info h4 {
+    font-size: 1.125rem;
+    color: var(--color-heading);
+    margin: 0;
+}
+
+.author-info p {
+    font-size: 0.875rem;
+    color: var(--color-text-light);
+    margin: 0;
+}
+
+/* Statistics Section */
+.stats {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.stats h3 {
+    font-size: 1.75rem;
+    color: var(--color-heading);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .reviews-grid {
+        grid-template-columns: repeat(2, 1fr); /* Adjust to 2 columns */
+    }
+}
+
+@media (max-width: 480px) {
+    .reviews-grid {
+        grid-template-columns: 1fr; /* Adjust to 1 column */
+    }
+}
+
+/* #### FAQ SECTION STYLES #### */
+.faq {
+    padding: 4rem 0;
+    background-color: var(--color-secondary);
+}
+
+.faq h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--color-heading);
+    margin-bottom: 2rem;
+}
+
+.faq-item {
+    margin-bottom: 1rem;
+    border-bottom: 1px solid var(--color-text-light);
+    max-width: 80%; /* 20% less wide */
+    margin: 0 auto; /* Center each FAQ item */
+}
+
+.faq-item h3 {
+    font-size: 1.275rem; /* 15% smaller */
+    color: var(--color-heading);
+    cursor: pointer;
+    padding: 1rem;
+    margin: 0;
+    background-color: var(--color-background);
+    transition: background-color 0.3s ease;
+}
+
+.faq-item h3:hover {
+    background-color: var(--color-primary-light);
+}
+
+.faq-content {
+    display: none;
+    padding: 1rem;
+    font-size: 1rem;
+    color: var(--color-text-light);
+}
+
+.faq-item.open .faq-content {
+    display: block;
+}
+
+.faq-item.open h3 {
+    background-color: var(--color-primary-dark);
+    color: var(--color-text-white);
+}
+
+/* #### MOBILE ADJUSTMENTS #### */
+@media (max-width: 768px) {
+    .faq h2 {
+        font-size: 2rem;
+    }
+
+    .faq-item {
+        max-width: 100%; /* Full width on mobile */
+    }
+
+    .faq-item h3 {
+        font-size: 1.1rem; /* Slightly smaller headings for mobile */
+    }
+
+    .faq-content {
+        font-size: 0.95rem; /* Slightly smaller content text for better fit */
+    }
+}
+
+
+/* #### FOOTER STYLES #### */
+footer {
+    background-color: var(--color-footer);
+    padding: 2rem 1rem;
+    color: var(--color-text-white);
+    text-align: center;
+}
+
+.footer-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 1rem;
+}
+
+.footer-nav ul li a {
+    color: var(--color-text-white);
+    text-decoration: none;
+    font-weight: 600;
+    transition: opacity 0.2s ease;
+}
+
+.footer-nav ul li a:hover {
+    opacity: 0.8;
+}
+
+/* #### FOOTER SOCIAL MEDIA STYLES #### */
+.footer-socials {
+    margin-bottom: 1rem;
+}
+
+.footer-socials a {
+    margin: 0 0.5rem;
+    display: inline-block;
+    font-size: 1.5rem;
+    color: var(--color-text-white);
+    transition: color 0.2s ease;
+}
+
+.footer-socials a:hover {
+    color: var(--color-primary-light);
+    transform: translateY(-2px);
+}
+
+/* #### FOOTER LEGAL STYLES #### */
+/* Footer legal section with Flexbox */
+.footer-legal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.footer-legal ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.footer-legal ul li {
+    position: relative;
+}
+
+.footer-legal ul li:not(:last-child)::after {
+    content: " | ";
+    position: absolute;
+    right: -0.75rem; /* Adjust spacing between the link and the separator */
+    color: var(--color-footer-text);
+}
+
+.footer-legal ul li a {
+    color: var(--color-footer-text);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.footer-legal ul li a:hover {
+    color: var(--color-text-white);
+}
+
+.footer-legal p {
+    color: var(--color-footer-text);
+    margin: 0;
+}
+
+/* Mobile version adjustments */
+@media (max-width: 768px) {
+    .footer-legal {
+        justify-content: center; /* Center the content */
+        text-align: center;      /* Center the text */
+    }
+
+    .footer-legal ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center; /* Center the links */
+        gap: 0.5rem;             /* Reduce gap between links */
+    }
+
+    .footer-legal ul li:not(:last-child)::after {
+        right: -0.35rem; /* Adjust spacing for the separator on mobile */
+    }
+
+    .footer-legal p {
+        margin-top: 1rem; /* Add some margin above the copyright text */
+    }
+}
+
+
+/* #### PAGINATION FOR LISTINGS PAGES ##### */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    font-size: 16px;
+    color: #91b4d2; /* Adjust color to match your theme */
+}
+
+.pagination button {
+    padding: 8px 12px;
+    margin: 0 5px;
+    font-size: 14px;
+    background-color: #e0e0e0; /* Light background for inactive buttons */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.pagination button:hover {
+    background-color: #d0d0d0; /* Slightly darker on hover */
+}
+
+.pagination button:disabled {
+    background-color: #f0f0f0;
+    color: #999;
+    cursor: not-allowed;
+}
+
+.pagination span {
+    font-weight: bold;
+    color: #666; /* Adjust color to fit your theme */
+    margin: 0 10px;
+}
+
+
+/* #### RESPONSIVE STYLES #### */
+@media (max-width: 768px) {
+    /* Header & Navigation */
+    .nav-toggle {
+        display: block;
+    }
+
+    nav ul.nav-list {
+        flex-direction: column;
+        gap: 1rem;
+        background-color: var(--color-primary-dark);
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        padding: 1rem;
+        display: none;
+    }
+
+    nav ul.nav-list {
+        background-color: var(--color-primary);
+        box-shadow: 0 4px 6px rgba(0, 51, 102, 0.1);
+    }
+
+   /* CTA Button */
+    .cta-button {
+        width: 100%;
+        margin-top: 1rem;
+    }
+
+    /* Section Headers */
+    .key-points h2,
+    .featured-agents h2 {
+        font-size: 2rem;
+    }
+
+    /* Grid Layouts */
+    .key-points-grid,
+    .agents-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Cards */
+    .key-point,
+    .agent-card {
+        margin: 0 1rem;
+    }
+}
+
