@@ -26,7 +26,7 @@ function populateAgentCards(agents) {
 
     // Loop over only rows 2, 3, and 4
     agents.forEach((agent, index) => {
-        if (index < 3 || index > 5) return; // Skip the header and rows outside 2, 3, and 4
+        if (index < 7 || index > 9) return; // Skip the header and rows outside 2, 3, and 4
 
         const agentName = agent[1];       // Name from column 1 (Nombre Corredor)
         const agentDescription = agent[5]; // Description from column 2
