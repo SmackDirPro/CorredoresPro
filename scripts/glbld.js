@@ -1,5 +1,5 @@
 // Versioned Global CSS Loader
-const cssVersion = "1.0"; // Update only here
+const cssVersion = "1.1"; // Update only here
 const link = document.createElement("link");
 link.rel = "stylesheet";
 link.href = `/styles/mystyles.css?v=${cssVersion}`;
