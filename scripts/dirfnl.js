@@ -185,7 +185,11 @@ document.addEventListener('DOMContentLoaded', function () {
             listings.sort((a, b) => {
                 if (a.sponsored !== b.sponsored) return b.sponsored - a.sponsored; // Sponsored first
                 if (a.verified !== b.verified) return b.verified - a.verified;     // Then verified
-                return b.rating - a.rating;                                        // Then rating
+                // Parse ratings to float numbers to ensure numeric sorting
+                const ratingA = parseFloat(a.googleRating) || 0;  // default to 0 if rating is missing or invalid
+                const ratingB = parseFloat(b.googleRating) || 0;
+
+                return ratingB - ratingA;  // Then sort by rating
             });
 
             // Update the number of corredoras in the Hero section
