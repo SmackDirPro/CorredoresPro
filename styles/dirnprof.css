@@ -1,0 +1,734 @@
+/* ###### HERO SECTION ###### */
+
+/* Profile Hero Section */
+.profile-hero {
+    position: relative;
+    height: 360px;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: left;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 29, 56, 0.65);
+    padding: 80px 20px;
+}
+
+.hero-content {
+    position: relative;
+    color: #fff;
+    /* padding: 40px; */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 40px 10px 40px;
+}
+
+/* Flex container for badges and buttons */
+.hero-flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+/* Heading and Badges */
+.hero-content h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 15px;
+    margin-top: 1.2rem;
+}
+
+
+/* Directory Hero Section */
+.region-hero {
+    position: relative;
+    min-height: 300px;
+    height: 430px;
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+}
+
+.dirheroovly {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 29, 56, 0.75);
+    padding: 80px 20px;
+}
+
+.dirherocont {
+    max-width: 1150px;
+    margin: 0 auto;
+    padding-top: 40px;
+    color: #ffffff;
+}
+
+/* ###### BREADCRUMBS ###### */
+
+.breadcrumb {
+    font-size: 14px;
+    color: #e7e7df;
+    margin-bottom: 10px;
+}
+
+.breadcrumb a {
+    color: #e7e7df;
+    text-decoration: none;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+/* ###### DIRECTORY STYLES SECTION ###### */
+
+/* Directory specific styles to add to your CSS */
+.directory-section {
+    padding: 8rem 1rem 4rem;
+    background: #ffffff;
+    min-height: 100vh;
+}
+
+.directory-header {
+    max-width: 1200px;
+    margin: 0 auto 2rem;
+    text-align: center;
+}
+
+.directory-subtitle {
+    color: #4a5568;
+    margin-top: 0.5rem;
+}
+
+.directory-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.directory-filters {
+    margin-bottom: 2rem;
+    text-align: right;
+}
+
+.directory-filters select {
+    padding: 0.5rem 1rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    background-color: white;
+    font-size: 0.9rem;
+}
+
+.listings-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.listing-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    position: relative;
+    overflow: hidden;
+}
+
+.listing-sponsored {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background-color: #5a67d8;
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.listing-content {
+    display: flex;
+    padding: 1.5rem;
+    gap: 1.5rem;
+}
+
+.listing-image {
+    width: 150px;
+    height: 150px;
+    flex-shrink: 0;
+}
+
+.listing-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.listing-details {
+    flex: 1;
+}
+
+.listing-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #2d3748;
+    margin-bottom: 0.5rem;
+}
+
+.listing-verified {
+    display: inline-flex;
+    align-items: center;
+    color: #5a67d8;
+    font-weight: 500;
+    font-size: 0.875rem;
+    margin-bottom: 0.75rem;
+}
+
+.listing-verified::before {
+    content: "✓";
+    margin-right: 0.25rem;
+}
+
+/* .listing-verified::before {
+    content: '';
+    display: inline-block;
+    background-image: url('images/verified-check.png');
+    background-size: contain;  /* or cover
+    background-repeat: no-repeat;
+    width: 16px;  /* adjust to desired size
+    height: 16px;
+    margin-right: 0.25rem;
+} */ 
+
+
+.listing-info {
+    color: #4a5568;
+    font-size: 0.875rem;
+    line-height: 1.5;
+}
+
+.listing-info strong {
+    color: #2d3748;
+    font-weight: 600;
+}
+
+.load-more-btn {
+    display: block;
+    margin: 2rem auto;
+    padding: 0.75rem 1.5rem;
+    background-color: white;
+    border: 1px solid #5a67d8;
+    color: #5a67d8;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.load-more-btn:hover {
+    background-color: #5a67d8;
+    color: white;
+}
+
+
+/* ###### DIRECTORY BUTTONS SECTION ###### */
+
+.action-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.primary-btn, .secondary-btn, .resource-btn {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.primary-btn {
+    background: #5a67d8;
+    color: white;
+}
+
+.secondary-btn {
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+}
+
+.resource-btn {
+    background: #2c5282;
+    color: white;
+}
+
+/* ###### PROFILE BADGES SECTION ###### */
+
+/* Badges */
+.badge-container {
+    display: inline-flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.badge {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9em;
+    font-weight: bold;
+    color: white;
+    padding: 6px 15px;
+    border-radius: 15px;
+    max-width: fit-content; /* Ensures badge only takes up as much space as needed */
+}
+
+.badge.verified {
+    background-color: #1d9bf0; /* blue color for verified */
+}
+
+.badge.sponsored {
+    background-color: #2a9d8f; /* green color for sponsored */
+}
+
+/* Font Awesome Icons for badges */
+.badge.verified::before {
+    content: "\f00c"; /* Font Awesome check icon */
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 900;
+}
+
+.badge.sponsored::before {
+    content: "\f155"; /* Font Awesome dollar-sign icon */
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+}
+
+/* Contact Buttons Aligned to the Right */
+.contact-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+    align-items: center;
+    justify-content: flex-end; /* Right-align buttons */
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 15px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+.phone-button {
+    background-color: #ea8933;
+}
+
+.website-button {
+    background-color: #0462b3;
+}
+
+.button i {
+    font-size: 1.2em; /* Icon size */
+}
+
+/* ###### PROFILE DETAILS SECTION ###### */
+/* Profile Details Section */
+.profile-details {
+    position: relative; /* Ensure relative positioning */
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 1100px;
+    margin: 20px auto;
+    display: block; /* Ensure it follows original structure on desktop */
+}
+
+.profile-details h2 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.profile-details p {
+    font-size: 1em;
+    color: #555;
+    margin: 5px 0;
+}
+
+.broker-image-container {
+    position: absolute;
+    top: 15px; /* Adjusted for spacing */
+    right: 15px;
+    padding: 5px;
+    max-width: 250px; /* Increase size as needed */
+    max-height: 250px;
+}
+
+.broker-image-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px; /* Optional for rounded corners */
+}
+
+/* Styling for the Map Link Button */
+.map-link {
+    background-color: #007bff; /* Blue color for the button */
+    font-size: 0.9em;          /* Slightly smaller font */
+    padding: 10px 18px;        /* Adjust padding */
+    color: white;              /* White text for contrast */
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    display: block;            /* Makes the button take the full width of the container */
+    width: fit-content;        /* Only as wide as the content */
+    margin: 20px auto 0;       /* Centers the button and adds space above */
+}
+
+.map-container {
+    width: 100%;
+    height: 450px; /* Adjust as needed */
+    margin-top: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+
+
+
+#additional-info h3 {
+    font-size: 1.2em;
+    margin-top: 20px;
+    color: #333;
+}
+
+/* Social Media and Contact Links */
+#instagram-link, #broker-email {
+    color: #007bff;
+    text-decoration: none;
+}
+
+#instagram-link:hover, #broker-email:hover {
+    text-decoration: underline;
+}
+
+/* ###### OTHER STYLES FOR DIRECTORY STYLES ###### */
+
+/* CTA Banner */
+.cta-banner {
+    background: #001d38;
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.cta-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.phone-number {
+    display: block;
+    font-size: 2rem;
+    color: #ffd700;
+    text-decoration: none;
+    margin: 15px 0;
+    font-weight: bold;
+}
+
+/* Directory Section */
+.directory-section {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.section-title {
+    color: #2d3748;
+    margin-bottom: 30px;
+    font-size: 1.8rem;
+}
+
+.more-info-button {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 5px 10px;
+        border-radius: 5px;
+        font-weight: bold;
+        color: white;
+        text-decoration: none;
+        font-size: 1em;
+        background-color: #ea8933;
+        border: none;
+        margin-top: 5px;
+}
+
+/* Styles for "Buscar por Comuna" Banner Section */
+.comuna-banner {
+    background-color: #0f3057;
+    padding: 2rem 1rem;
+    text-align: center;
+    color: #ffffff;
+    margin-top: 2rem;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.comuna-title {
+    font-size: 1.5rem;
+    color: #ff6b6b;
+    margin-bottom: 1rem;
+    font-weight: normal;
+}
+
+.comuna-list-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.comuna-item {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    background-color: #133b5c;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.comuna-item i {
+    margin-right: 0.5rem;
+    color: #ffce00; /* Icon color */
+}
+
+.comuna-item:hover {
+    background-color: #d6d9db;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
+
+/* ###### PROFILE RESPONSIVE STYLES ###### */
+
+/* Adjustments for smaller screens */
+@media (max-width: 768px) {
+    /* Profile Hero Section */
+    .profile-hero {
+        height: 380px; /* Reduce height */
+        justify-content: center; /* Center-align content */
+    }
+
+    .hero-overlay {
+        padding: 40px 15px; /* Reduce padding */
+    }
+
+    .hero-content h1 {
+        font-size: 2.15em; /* Reduce font size */
+        text-align: center;
+    }
+
+    /* Flex container for badges and buttons */
+    .hero-flex-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .badge-container, .contact-buttons {
+        width: 100%;
+        justify-content: center; /* Center buttons */
+        align-items: center;
+    }
+
+    /* Profile Details Section */
+    .profile-details {
+        padding: 15px; /* Reduce padding */
+        padding-top: 20px; /* Add top padding */
+        display: flex;
+        flex-direction: column; /* Stack items vertically */
+    }
+
+    /* Hide breadcrumbs on mobile */
+    .breadcrumb {
+        display: none;
+    }
+
+    .broker-image-container {
+        order: -1; /* Moves it to the top in flex order */
+        position: relative; /* Remove absolute positioning */
+        max-width: 250px; /* Reduce size for smaller screens */
+        margin: 0 auto 10px auto; /* Center the image with margin below */
+        display: block;
+        top: unset;
+        right: unset;
+    }
+
+    h2 {
+        text-align: center;
+    }
+
+    .contact-buttons {
+        justify-content: center; /* Center-align buttons on mobile */
+    }
+
+    .button {
+        padding: 12.75px 17px; /* Reduce padding by 15% */
+        font-size: 0.90em; /* Reduce font size by 15% */
+    }
+
+    /* Map Container */
+    .map-container {
+        height: 300px; /* Adjust height for mobile */
+    }
+
+    /* Agent Cards */
+    .agent-card {
+        margin: 10px auto; /* Center cards */
+        width: 90%; /* Full-width on small screens */
+    }
+}
+
+@media (max-width: 480px) {
+    /* Smaller adjustments for very small screens */
+    .profile-hero {
+        height: 200px;
+    }
+
+    .hero-content h1 {
+        font-size: 1.5em;
+    }
+
+    .button {
+        padding: 10px 15px;
+        font-size: 0.9em;
+    }
+    
+    /* Additional Info Section */
+    #additional-info h3 {
+        font-size: 1em;
+    }
+}
+
+
+
+/* ###### DIRECTORY RESPONSIVE STYLES ###### */
+
+/* General layout adjustments for smaller screens */
+@media (max-width: 768px) {
+    /* Ensure hero content centers on smaller screens */
+    .region-hero {
+        height: 500px; /* Allow flexible height for smaller screens */
+        padding: 20px 10px; /* Add padding to avoid overflow */
+    }
+
+    .dirherocont {
+        padding-top: 90px;
+        text-align: center;
+        font-size: 0.85em; /* Reduce text size by 15% */
+    }
+
+    .dirheroovly {
+        padding: 20px 10px;
+    }
+
+    /* Hide breadcrumbs on mobile */
+    .breadcrumb {
+        display: none;
+    }
+
+    /* Action buttons - horizontal and centered */
+    .action-buttons {
+        display: flex;
+        justify-content: center; /* Center horizontally */
+        gap: 10px;
+        width: 100%; /* Full width */
+    }
+
+    .action-buttons button {
+        width: 40%; /* Button width on smaller screens */
+        max-width: 200px;
+    }
+
+    /* Adjust listing layout to stack vertically */
+    .listings-container {
+        flex-direction: column;
+    }
+
+    /* Directory filters alignment */
+    .directory-filters {
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
+    /* Listing image adjustments for mobile */
+    .listing-image {
+        width: 100%;
+        height: auto;
+    }
+
+    .listing-content {
+        flex-direction: column;
+    }
+}
+
+/* For very small screens */
+@media (max-width: 480px) {
+    /* Reduce font sizes further */
+    .listing-title {
+        font-size: 1rem;
+    }
+
+    .listing-info {
+        font-size: 0.8rem;
+    }
+
+    /* Adjust padding */
+    .directory-section {
+        padding: 1rem;
+    }
+
+    /* Hero section font size reduction */
+    .region-hero h2 {
+        font-size: 1.275rem;
+    }
+
+    .region-hero p {
+        font-size: 0.765rem;
+    }
+
+    /* Full-width buttons on very small screens */
+    .action-buttons button {
+        width: 90%;
+        max-width: none;
+    }
+}

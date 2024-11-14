@@ -933,3 +933,46 @@ footer {
     }
 }
 
+
+
+.privacy-policy {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px;
+    font-family: Arial, sans-serif;
+    color: #333;
+  }
+  
+  .privacy-policy h1 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .privacy-policy h2 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+  
+  .privacy-policy p {
+    line-height: 1.5;
+    margin-bottom: 15px;
+  }
+  
+  .privacy-policy ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    margin-bottom: 15px;
+  }
+  
+  .privacy-policy li {
+    line-height: 1.5;
+    margin-bottom: 5px;
+  }
+  
+  .privacy-policy strong {
+    font-weight: bold;
+  }
+
